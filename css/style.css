@@ -1,0 +1,292 @@
+body {
+  font-family: 'Montserrat', sans-serif;
+  color: #FFA500
+}
+
+.container {
+  width: 100%;
+  height: 100%
+}
+
+h1 {
+  font-family: 'Shadows Into Light', cursive
+}
+
+h2,
+h3 {
+  'Montserrat', sans-serif
+}
+
+.web a {
+  color: #FFA500
+}
+
+a:hover {
+  color: #ffffff
+}
+
+.tabs {
+  padding-left: 0
+}
+
+.tabs li {
+  color: black;
+  padding-left: 0;
+  float: left;
+  list-style: none;
+  margin-left: 1%
+}
+
+.navbar {
+  margin-bottom: 50px
+}
+
+.container .jumbotron,
+.container-fluid .jumbotron {
+  border-radius: 0px;
+  color: #FFA500
+}
+
+.intro {
+  margin: 55px auto;
+  width: 50%;
+  padding: 15px;
+  text-align: center;
+  background-color: black;
+  opacity: .8;
+  border-radius: 5px
+}
+
+.intro p {
+  width: 50%;
+  margin: 0 auto;
+  border-radius: 180px;
+  font-weight: bold;
+  padding: 5%;
+  font-family: 'Kaushan Script', cursive
+}
+
+.home {
+  background: url('http://cdn1.editmysite.com/uploads/2/8/3/7/28376243/background-images/1370074157.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: white;
+  padding-top: 210px
+}
+
+.btn-block:hover {
+  transform: scale(0.9);
+  transition: 0.5s;
+  color: white
+}
+
+.fa {
+  margin-right: 5px
+}
+
+.jumbo-row {
+  padding-top: 50px
+}
+
+.jumbotron {
+  height: 900px;
+  text-align: center
+}
+
+.navbar,
+.jumbotron {
+  border-radius: 0px;
+  margin-bottom: 0px;
+  margin-left: -15px;
+  margin-right: -15px
+}
+
+.navbar-right {
+  padding-right: 15px
+}
+
+.portfolio,
+.about {
+  padding-top: 10px;
+  height: 900px
+}
+
+#about-p {
+  max-width: 450px;
+  margin: 0 auto;
+  font-size: 120%;
+  color: white;
+  text-align: justify
+}
+
+.portfolio {
+  background: url('http://www.roflcopterdown.com/imgs/backgrounds/stardust.png') center center fixed;
+}
+
+.about {
+  background: url('http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/zwartevilt.png') center center fixed;
+}
+
+.about p {
+  text-align: center;
+  font-size: 16px
+}
+
+.about img {
+  max-width: 25%;
+  max-height: 25%;
+}
+
+.btn {
+  background: transparent;
+  box-shadow: 0px 0px 0px 3px #D1D0CE;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  color: #FFA500
+}
+
+.content {
+  border-top: 3px solid #D1D0CE;
+  border-radius: 20px 20px 0px 0px;
+}
+
+.btn-content {
+  border-radius: 0px 3px 0px 0px;
+  margin-bottom: 0px;
+  font-family: 'Kaushan Script', cursive;
+  font-size: 16px
+}
+
+.btn-content:hover {
+  color: white
+}
+
+.btn-content:focus {
+  outline: none;
+  color: black;
+  border-radius: 200px 3px 0px 0px;
+  background-color: orange
+}
+
+.btn-active {
+  outline: none;
+  color: black;
+  border-radius: 200px 3px 0px 0px;
+  background-color: orange
+}
+
+.contact {
+  background: url('http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/broken_noise.png') center center fixed;
+  padding-top: 270px;
+  color: white
+}
+
+.content {
+  text-align: center
+}
+
+.content-details {
+  color: white
+}
+
+.content-details {
+  text-align: left !important;
+}
+
+.col-md-4 {
+  text-align: center;
+}
+
+.navbar-text-bottom {
+  margin-left: 5%;
+}
+
+.col-md-4 img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto
+}
+
+#games {
+  text-align: left
+}
+
+.web-wrapper {
+  margin: 0 auto;
+}
+
+.web p {
+  text-align: left
+}
+
+
+
+.web {
+  color: white;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+.web-active {
+  transform: scale(0.9);
+  transform-origin: bottom left
+}
+
+.web img:hover {
+  transform: scale(1.1);
+  transition: 0.5s;
+  color: white
+}
+
+@media only screen and (max-width: 1200px) {
+  .col-md-2 {
+    margin-top: 2px;
+  }
+  .btn {
+    margin: 0 auto;
+    width: 90%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 979px) {}
+
+@media only screen and (max-width: 767px) {
+  .content-details h3 {
+    font-size: 16px
+  }
+  .content-details h4 {
+    font-size: 14px
+  }
+  .content-details {
+    font-size: 12px
+  }
+  .contact {
+    padding-top: 170px;
+  }
+  .portfolio,
+  .about {
+    padding-top: 50px;
+  }
+  .nav > li {
+    position: relative;
+    display: block;
+    float: left;
+    margin-left: 1%;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .img-responsive {
+    max-width: 25%;
+    max-height: 25%;
+  }
+  .navbar-right {
+    padding-right: 0px
+  }
+  .intro p {
+    font-size: 100%;
+    width: 100%;
+  }
+  #about-p {
+    font-size: 110%
+  }
+}
