@@ -3,6 +3,19 @@ body {
   color: #FFA500
 }
 
+.show {
+  display: block
+}
+
+.web img {
+    width: 50%;
+    height: 50%;
+}
+
+.hidden {
+  display: none
+}
+
 .container {
   width: 100%;
   height: 100%
@@ -119,7 +132,7 @@ a:hover {
 }
 
 .portfolio {
-  background: url('http://www.roflcopterdown.com/imgs/backgrounds/stardust.png') center center fixed;
+  background: url('http://www.jacobting.net/imgs/backgrounds/stardust.png') center center fixed;
 }
 
 .about {
@@ -232,7 +245,7 @@ a:hover {
 }
 
 .web img:hover {
-  transform: scale(1.1);
+  transform: scale(.95);
   transition: 0.5s;
   color: white
 }
@@ -272,9 +285,17 @@ a:hover {
     float: left;
     margin-left: 1%;
   }
+  
+     .row {
+    margin: 0 auto;
+  }
+  #about, #portfolio {
+    margin-right: -15px;
+    margin-left: -15px
+  }
 }
 
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 480px) {   
   .img-responsive {
     max-width: 25%;
     max-height: 25%;
@@ -288,5 +309,14 @@ a:hover {
   }
   #about-p {
     font-size: 110%
+  }
+  
+ 
+}
+
+@media only screen and (max-width: 320px) {   
+  .web img {
+    max-width: 50%;
+    max-height: 50%;
   }
 }

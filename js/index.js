@@ -1,6 +1,6 @@
 function activate(div, btn, css) {
   $(btn).addClass(css);
-  $(div).css('display', 'block');
+  $(div).fadeIn(1000).css('display', 'block');
 }
 
 function remove(div, btn, css) {
@@ -8,90 +8,61 @@ function remove(div, btn, css) {
   $(div).css('display', 'none');
 }
 
+var buttons = {
+  portfolio: function() {
+    $('#background-but').on('click', function() {
+      activate('#background', '#background-but', 'btn-active');
+      remove('#web', '#web-but', 'btn-active')
+      remove('#games', '#games-but', 'btn-active')
+    });
+
+    $('#web-but').on('click', function() {
+      activate('#web', '#web-but', 'btn-active');
+      remove('#background', '#background-but', 'btn-active')
+      remove('#games', '#games-but', 'btn-active')
+    });
+
+    $('#games-but').on('click', function() {
+      activate('#games', '#games-but', 'btn-active');
+      remove('#background', '#background-but', 'btn-active')
+      remove('#web', '#web-but', 'btn-active')
+    });
+  },
+  web: function() {
+    $('#clock-btn').on('click', function() {
+      activate('#clock', '#clock-btn', 'web-active');
+      remove('#quotes', '#quotes-btn', 'web-active');
+      remove('#aec', '#aec-btn', 'web-active');
+      remove('#flag', '#flag-btn', 'web-active');
+    });
+
+    $('#quotes-btn').on('click', function() {
+      activate('#quotes', '#quotes-btn', 'web-active');
+      remove('#clock', '#clock-btn', 'web-active');
+      remove('#aec', '#aec-btn', 'web-active');
+      remove('#flag', '#flag-btn', 'web-active');
+    });
+
+    $('#aec-btn').on('click', function() {
+      activate('#aec', '#aec-btn', 'web-active');
+      remove('#clock', '#clock-btn', 'web-active');
+      remove('#quotes', '#quotes-btn', 'web-active');
+      remove('#flag', '#flag-btn', 'web-active');
+    });
+
+    $('#flag-btn').on('click', function() {
+      activate('#flag', '#flag-btn', 'web-active');
+      remove('#clock', '#clock-btn', 'web-active');
+      remove('#aec', '#aec-btn', 'web-active');
+      remove('#quotes', '#quotes-btn', 'web-active');
+    });
+  }
+}
+
 $(document).ready(function() {
   // Portfolio top buttons
-  $('#background-but').on('click', function() {
-    activate('#background', '#background-but', 'btn-active');
-    remove('#web', '#web-but', 'btn-active')
-    remove('#games', '#games-but', 'btn-active')
-  });
-
-  $('#web-but').on('click', function() {
-    $('#background-but').removeClass('btn-active');
-    $('#background').css('display', 'none');
-
-    $('#web-but').addClass('btn-active');
-    $('#web').css('display', 'block');
-
-    $('#games-but').removeClass('btn-active');
-    $('#games').css('display', 'none');
-  });
-
-  $('#games-but').on('click', function() {
-    $('#background-but').removeClass('btn-active');
-    $('#background').css('display', 'none');
-
-    $('#web-but').removeClass('btn-active');
-    $('#web').css('display', 'none');
-
-    $('#games-but').addClass('btn-active');
-    $('#games').css('display', 'block');
-  });
+  buttons.portfolio();
 
   //Porfolio web buttons
-  $('#clock-btn').on('click', function() {
-    $('#clock-btn').addClass('web-active');
-    $('#clock').css('display', 'block');
-
-    $('#quotes-btn').removeClass('web-active');
-    $('#quotes').css('display', 'none');
-
-    $('#aec-btn').removeClass('web-active');
-    $('#aec').css('display', 'none');
-
-    $('#flag-btn').removeClass('web-active');
-    $('#flag').css('display', 'none');
-  });
-
-  $('#quotes-btn').on('click', function() {
-    $('#clock-btn').removeClass('web-active');
-    $('#clock').css('display', 'none');
-
-    $('#quotes-btn').addClass('web-active');
-    $('#quotes').css('display', 'block');
-
-    $('#aec-btn').removeClass('web-active');
-    $('#aec').css('display', 'none');
-
-    $('#flag-btn').removeClass('web-active');
-    $('#flag').css('display', 'none');
-  });
-
-  $('#aec-btn').on('click', function() {
-    $('#clock-btn').removeClass('web-active');
-    $('#clock').css('display', 'none');
-
-    $('#quotes-btn').removeClass('web-active');
-    $('#quotes').css('display', 'none');
-
-    $('#aec-btn').addClass('web-active');
-    $('#aec').css('display', 'block');
-
-    $('#flag-btn').removeClass('web-active');
-    $('#flag').css('display', 'none');
-  });
-
-  $('#flag-btn').on('click', function() {
-    $('#clock-btn').removeClass('web-active');
-    $('#clock').css('display', 'none');
-
-    $('#quotes-btn').removeClass('web-active');
-    $('#quotes').css('display', 'none');
-
-    $('#aec-btn').removeClass('web-active');
-    $('#aec').css('display', 'none');
-
-    $('#flag-btn').addClass('web-active');
-    $('#flag').css('display', 'block');
-  });
+  buttons.web();
 })
